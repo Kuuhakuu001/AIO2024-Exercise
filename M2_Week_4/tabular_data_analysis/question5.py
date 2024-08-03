@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 
+
 def compute_correlation_cofficient (X , Y ):
     N = len(X)
     numerator = 0
@@ -11,13 +12,11 @@ def compute_correlation_cofficient (X , Y ):
 
     return np.round(numerator / denominator , 2)
 
-
 data = pd.read_csv ("advertising.csv")
-
 x = data ["TV"]
 y = data ["Radio"]
 
-corr_xy = compute_correlation_cofficient (x , y)
+corr_xy = compute_correlation_cofficient(x , y)
 print(f"Correlation between TV and Sales: {round(corr_xy, 2)}")
 
 # Answer: B
